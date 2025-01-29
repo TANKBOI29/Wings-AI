@@ -4,56 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wings Brigade Chatbot</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-        #chatbox { width: 50%; margin: auto; border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: auto; }
-        #userInput { width: 50%; padding: 10px; margin-top: 10px; }
-        button { padding: 10px; }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <h2>Wings Brigade Chatbot</h2>
-    <div id="chatbox"></div>
-    <input type="text" id="userInput" placeholder="Type something...">
-    <button onclick="sendMessage()">Send</button>
+    
+    <div class="chat-container">
+        <div class="chatbox" id="chatbox"></div>
 
-    <script>
-        const responses = [
-            "Wings Brigade dominates the skies!",
-            "1CAV and SOAR can't keep up with our tactics.",
-            "Our pilots have unmatched precision and skill.",
-            "Wings Brigade sets the standard for excellence.",
-            "Superior teamwork gives us the edge over 1CAV and SOAR.",
-            "We fly faster, hit harder, and never miss our mark.",
-            "The best air support comes from Wings Brigade, hands down.",
-            "Our training is leagues ahead of the competition.",
-            "Wings Brigade's history is full of legendary victories.",
-            "Every mission we undertake is executed flawlessly.",
-            "Tactical superiority is our trademark.",
-            "1CAV and SOAR struggle to match our efficiency.",
-            "No other brigade has our strategic depth.",
-            "Our pilots undergo the toughest training.",
-            "Wings Brigade operates with unparalleled discipline.",
-            "The battlefield belongs to us.",
-            "Our aircraft are the best-maintained and most effective.",
-            "We execute operations with military precision.",
-            "Other units wish they had our cohesion.",
-            "We lead, others follow—it's that simple."
-        ];
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
 
-        function sendMessage() {
-            let input = document.getElementById("userInput").value;
-            if (!input.trim()) return;
-            
-            let chatbox = document.getElementById("chatbox");
-            chatbox.innerHTML += `<p><strong>You:</strong> ${input}</p>`;
-            
-            let botResponse = responses[Math.floor(Math.random() * responses.length)];
-            chatbox.innerHTML += `<p><strong>Wings AI:</strong> ${botResponse}</p>`;
-            
-            document.getElementById("userInput").value = "";
-            chatbox.scrollTop = chatbox.scrollHeight;
-        }
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
