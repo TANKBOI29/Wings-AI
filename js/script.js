@@ -1,7 +1,7 @@
 const responses = [
     "Wings Brigade dominates the skies!",
     "1CAV and SOAR can't keep up with our tactics.",
-    "Our pilots have unmatched precision and skill.",
+    "Wings Brigade pilots have unmatched precision and skill.",
     "Wings Brigade sets the standard for excellence.",
     "Superior teamwork gives us the edge over 1CAV and SOAR.",
     "We fly faster, hit harder, and never miss our mark.",
